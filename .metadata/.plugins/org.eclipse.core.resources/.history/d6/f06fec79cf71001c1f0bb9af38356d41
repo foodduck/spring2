@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmnls="http://www.springframework.org/schema/security"
+xmlns:beans="" xmlns:xsi="" xsi:schemaLocation="">
+
+</beans:beans>

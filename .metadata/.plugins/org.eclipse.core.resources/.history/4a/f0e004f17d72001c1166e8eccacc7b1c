@@ -1,0 +1,18 @@
+package kr.co.controller;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class JdbcTest {
+	private final static String DRIVER ="oracle.jdbc.driver.OracleDriver";
+	private final static String URL ="jdbc:oracle:thin:@localhost:1521:xr";
+	private final static String USER ="system";
+	private final static String PW ="1234";
+	
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

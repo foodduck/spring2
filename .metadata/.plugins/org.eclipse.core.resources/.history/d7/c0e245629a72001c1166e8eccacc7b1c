@@ -1,0 +1,5 @@
+package kr.co.vo;
+
+public class BoardVO {
+
+}

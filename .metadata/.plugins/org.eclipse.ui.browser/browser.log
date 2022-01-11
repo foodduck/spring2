@@ -1,0 +1,35 @@
+
+1월 10, 2022 15:33:38.06 NEW SESSION
+1월 10, 2022 15:33:38.06 [7472:16648:0110/153338.058:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+1월 10, 2022 15:33:38.06 [7472:16648:0110/153338.058:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+1월 10, 2022 15:33:38.06 [7472:16648:0110/153338.058:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+1월 10, 2022 15:33:38.06 [7472:16648:0110/153338.059:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+1월 10, 2022 15:33:38.06 [7472:12748:0110/153338.066:ERROR:device_event_log_impl.cc(214)] [15:33:38.067] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+1월 10, 2022 15:34:17.39 [12308:17552:0110/153417.393:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+1월 10, 2022 15:34:17.39 [12308:17552:0110/153417.393:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+1월 10, 2022 15:34:17.39 [12308:17552:0110/153417.393:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+1월 10, 2022 15:34:17.39 [12308:17552:0110/153417.397:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+1월 10, 2022 15:34:17.40 [12308:8796:0110/153417.402:ERROR:device_event_log_impl.cc(214)] [15:34:17.401] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+1월 10, 2022 15:34:56.47 [17556:3688:0110/153456.479:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+1월 10, 2022 15:34:56.47 [17556:3688:0110/153456.479:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+1월 10, 2022 15:34:56.47 [17556:3688:0110/153456.479:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+1월 10, 2022 15:34:56.48 [17556:3688:0110/153456.480:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+1월 10, 2022 15:34:56.48 [17556:17688:0110/153456.485:ERROR:device_event_log_impl.cc(214)] [15:34:56.485] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+
+1월 10, 2022 18:27:54.89 NEW SESSION
+1월 10, 2022 18:27:54.89 [14540:6388:0110/182754.891:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+1월 10, 2022 18:27:54.89 [14540:6388:0110/182754.891:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+1월 10, 2022 18:27:54.89 [14540:6388:0110/182754.891:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+1월 10, 2022 18:27:54.89 [14540:6388:0110/182754.892:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+1월 10, 2022 18:27:54.89 [14540:10208:0110/182754.898:ERROR:device_event_log_impl.cc(214)] [18:27:54.899] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+1월 10, 2022 18:29:08.66 [11180:8356:0110/182908.668:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+1월 10, 2022 18:29:08.66 [11180:8356:0110/182908.668:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+1월 10, 2022 18:29:08.66 [11180:8356:0110/182908.668:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+1월 10, 2022 18:29:08.67 [11180:8356:0110/182908.670:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+1월 10, 2022 18:29:08.67 [11180:15184:0110/182908.674:ERROR:device_event_log_impl.cc(214)] [18:29:08.674] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+1월 10, 2022 18:29:23.93 [18084:4616:0110/182923.933:ERROR:chrome_browser_main_extra_parts_metrics.cc(226)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+1월 10, 2022 18:29:23.93 [18084:4616:0110/182923.933:ERROR:chrome_browser_main_extra_parts_metrics.cc(229)] crbug.com/1216328: Checking Bluetooth availability ended.
+1월 10, 2022 18:29:23.93 [18084:4616:0110/182923.933:ERROR:chrome_browser_main_extra_parts_metrics.cc(232)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+1월 10, 2022 18:29:23.93 [18084:4616:0110/182923.934:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
+1월 10, 2022 18:29:23.93 [18084:10280:0110/182923.939:ERROR:device_event_log_impl.cc(214)] [18:29:23.939] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+1월 10, 2022 18:31:38.54 [18084:2352:0110/183138.546:ERROR:database.cc(1773)] History SQLite error: code 1555 errno 0: UNIQUE constraint failed: context_annotations.visit_id sql: INSERT INTO context_annotations( visit_id,context_annotation_flags,duration_since_last_visit,page_end_reason,total_foreground_duration )VALUES(?,?,?,?,?)
