@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="replyMapper">
+	<!-- 댓글 목록 -->
+	<select id="replyRead" resultType="kr.co.vo.ReplyVO">
+		select RNO, CONTENT, WRITER, REGDATE from MP_REPLY where BNO=#{bno}
+	</select>
+	<!-- 댓글 추가 -->
+	<select id="replyInsert" parameterType="kr.co.vo.ReplyVO">
+		insert into MP_REPLY(BNO, RNO, CONTENT, WRITER) values (#{bno}, MP_REPLY_SEQ.NEXTVAL, #{content}, #{writer})
+	</select>
+	<!-- 댓글 수정 -->
+	<insert id="replyUpdate" parameterType="kr.co.vo.ReplyVO">
+		update MP_REPLY set CONTENT=#{content} where RNO=#{rno}
+	</insert>
+	<!-- 회원 정보 수정 -->
+	<update id="">
+	
+	</update>
+	<!-- 회원 제거/탈퇴 -->
+	<delete id="">
+	
+	</delete>
+</mapper>

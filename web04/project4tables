@@ -24,7 +24,7 @@ writer varchar2(50) not null, regdate date default sysdate, constraint mp_replay
 insert into mp_reply values (1, 1, '댓글내용', '게시자', '');
 
 --파일
-create sequence mp_mp_file_seq start with 1 increment by 1 nomaxvalue nocache;
+create sequence mp_file_seq start with 1 increment by 1 nomaxvalue nocache;
 
 create table mp_file (file_no int primary key, bno int not null, 
 org_file_name varchar2(260) not null, stored_file_name varchar2(36) not null, 
