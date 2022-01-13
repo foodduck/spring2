@@ -1,5 +1,8 @@
 package kr.co.vo;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -62,8 +65,9 @@ public class PageMaker {
 	}
 	
 	private void calcData() {	//시작페이지, 끝페이지, 전체페이지 수, 이전/다음페이지 존재 걔산
-		endPage = (int) (Math.ceil(cri.getPage()/(double) displayPageNum) * displayPageNum startPage = (endPage - displayPageNum) +1;
-		startPage = (endPage - displayPageNum) + 1;
+		endPage = (int) (Math.ceil(cri.getPage()/(double) displayPageNum) * displayPageNum); 
+		startPage = (endPage - displayPageNum) +1;
+		
 	
 	
 	}
@@ -71,7 +75,7 @@ public class PageMaker {
 		SearchCriteria sc = new SearchCriteria();
 		UriComponents uriComponents = UriComponentsBuilder.newInstance()
 				.queryParam("page", page)
-				.queryParam("perPageNum", cri.getPerPage())
+				.queryParam("perPageNum", cri.getperPageNum())
 				.queryParam("searchType", sc.getSearchType())
 				.queryParam("keyword", encoding(sc.getKeyword()))
 				.build();
@@ -79,9 +83,15 @@ public class PageMaker {
 				
 	}
 	
-	public String encoding(String keyword) {	//한글로 입력된 검색어를 
-		if(keyword == null || keyword.trim().length() == 0) {
+	private String encoding(String keyword) {
+		if(keyword == null || keyword.trim().length() == 0) { 
 			return "";
+		}
+		 
+		try {
+			return URLEncoder.encode(keyword, "UTF-8");
+		} catch(UnsupportedEncodingException e) { 
+			return ""; 
 		}
 	}
 }	

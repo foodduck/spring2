@@ -1,0 +1,8 @@
+package kr.co.service;
+
+public class BoardServiceImpl {
+	@Inject
+	private BoardDAO dao;
+	
+	
+}

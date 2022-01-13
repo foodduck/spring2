@@ -1,0 +1,29 @@
+package kr.co.dao;
+
+import kr.co.vo.BoardVO;
+import kr.co.vo.SearchCriteria;
+
+public interface BoardDAO {
+	
+	//게시물 작성	sql.boardInsert(boardVO)
+	public void write(BoardVO boardVO) throws Exception;
+	//게시물 목록	sql.boardList(sc) boardVO
+	public list<BoardVO> list(SearchCriteria scri) throws Exception;
+	//게시물 총 개수		sql.boardCount(sc) count
+	
+	//게시물 조회	sql.boardRead(bno) boardVO
+	
+	//게시글 수정	sql.boardUpdate(boardVO)
+	
+	//게시글 삭제	 sql.boardDelete(bno)
+	
+	//첨부파일 업로드	sql.fileInsert(hashMap)
+	
+	//첨부파일 조회		sql.fileRead(bno), hashMap
+	
+	//첨부파일 다운로드	sql.fileDown(hashMap), hashMap
+	
+	//첨부파일 수정		sql.fileUpdate(hashMap)
+	
+	//게시글 조회수 증가	sql.boardHit(bno)
+}

@@ -1,0 +1,56 @@
+package kr.co.vo;
+
+//게시판 및 댓글의 페이징 처리를 위한 조건을 저장하는 VO 클래스
+public class Criteria {
+	private int page;	//현재 페이지번호
+	private int perPageNumNum = 10;	//한 페이지당 글의 수
+	private int rowStart = 1;	//현재 페이지의 첫번째 줄 글번호
+	private int rowEnd;	//현제 페이지의 마지막 줄 글번호
+	
+	public Criteria(int page, int perPageNum) {
+		this.page = page;
+		this.perPageNum = perPageNum;
+	}
+	public int getPage() {
+		return page;
+	}
+	public void setPage(int page) {
+		if(page <= 0) {
+			this.page = 1;
+			return;
+		}
+		this.page = page;
+	}
+	public int getperPageNum() {
+		return perPageNum;
+	}
+	public void setperPageNumNum(int perPageNumNum) {
+		if (perPageNumNum <= 0 || perPageNumNum > 100) {
+			this.perPageNumNum = 10;
+			return;
+		}
+		this.perPageNumNum = perPageNumNum;
+	}
+	public int getRowStart() {	//현재 페이지의 첫 번째 = 줄의 글 번호
+		rowStart = ((page -1) * perPageNum) +1;
+		return rowStart;
+	}
+	public void setRowStart(int rowStart) {
+		this.rowStart = rowStart;
+	}
+	public int getRowEnd() {	//현재 페이지의 맨 마지막 줄의 글 번호
+		rowEnd = rowStart + perPageNum -1;
+		return rowEnd;
+	}
+	public void setRowEnd(int rowEnd) {
+		this.rowEnd = rowEnd;
+	}
+	@Override
+	public String toString() {
+		return "Criteria [page=" + page + ", perPageNum=" + perPageNum + ", rowStart=" + rowStart + ", rowEnd=" + rowEnd
+				+ "]";
+	}
+	
+	
+	
+}
