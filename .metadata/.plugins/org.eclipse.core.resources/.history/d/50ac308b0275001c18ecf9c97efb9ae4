@@ -1,0 +1,15 @@
+package kr.co.controller;
+
+import javax.servlet.http.HttpServlet;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/board/*")
+public class BoardController extends HttpServlet {
+	private static final logger = LoggerFactory.getLogger(BoardController.class);
+   
+	@Inject
+	private BoardService boardService;
+}

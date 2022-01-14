@@ -1,0 +1,16 @@
+package kr.co.controller;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@Controller
+@RequestMapping("/member/*")
+public class MemberController2 extends HttpServlet {
+	private static final logger = LoggerFactory.getLogger(BoardController.class);
+       
+
+
+}

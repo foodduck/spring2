@@ -1,0 +1,15 @@
+package kr.co.controller;
+
+import javax.servlet.http.HttpServlet;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/member/*")
+public class MemberController extends HttpServlet {
+	private static final logger = LoggerFactory.getLogger(BoardController.class);
+       
+
+
+}
