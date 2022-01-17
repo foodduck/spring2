@@ -20,8 +20,8 @@ public class MemberDAOImpl implements MemberDAO {
 	
 	//상세회원 조회(관리자)	sql.adminMemberView(String userid) MemberVO
 	@Override
-	public MemberVO adminMemberView(String userid) throws Exception {
-		return sql.selectOne("memberMapper.adminMemberView", userid);
+	public MemberVO adminMemberView(MemberVO vo) throws Exception {
+		return sql.selectOne("memberMapper.adminMemberView", vo);
 	}
 
 	//상세회원 조회(회원)	sql.memberView()
@@ -32,14 +32,20 @@ public class MemberDAOImpl implements MemberDAO {
 	
 	//회원 등록	sql.memberInsert()
 	@Override
-	public void memberInsert() throws Exception {
-		sql.insert("memberMapper.memberInsert");
+	public void memberInsert(MemberVO vo) throws Exception {
+		sql.insert("memberMapper.memberInsert", vo);
 	}
 	
-	//회원정보 수정	sql.memberUpdate()
+	//회원정보 수정(회원)	sql.memberUpdate()
 	@Override
 	public void memberUpdate() throws Exception {
 		sql.update("memberMapper.memberUpdate");
+	}
+
+	//회원정보 수정(관리자)	sql.memberUpdate()
+	@Override
+	public void adminMemberUpdate(MemberVO vo) throws Exception {
+		sql.update("memberMapper.memberUpdate", vo);
 	}
 	
 	//회원 탈퇴(회원)	sql.memberDelete()
@@ -50,27 +56,26 @@ public class MemberDAOImpl implements MemberDAO {
 
 	//회원 삭제(관리자)	sql.adminMemberDelete()
 	@Override
-	public void adminMemberDelete(String userid) throws Exception {
-		sql.delete("memberMapper.adminMemberDelete", userid);
+	public void adminMemberDelete(MemberVO vo) throws Exception {
+		sql.delete("memberMapper.adminMemberDelete", vo);
 		
 	}
 	
 	//로그인	sql.memberLogin()
 	@Override
-	public void memberLogin(MemberVO memberVO) throws Exception {
-		sql.selectOne("memberMapper.memberLogin", memberVO);
-		
+	public MemberVO memberLogin(MemberVO memberVO) throws Exception {
+		return sql.selectOne("memberMapper.memberLogin", memberVO);
 	}
 
-	//패스워드 체크	sql.memberCheckPw()
+	//패스워드 체크	sql.memberCheckPW()
 	@Override
-	public int memberCheckPw() throws Exception {
-		return sql.selectOne("memberMapper.memberCheckPw");
+	public int memberCheckPW(MemberVO vo) throws Exception {
+		return sql.selectOne("memberMapper.memberCheckPW",vo);
 	}
 
 	//아이디 중복 체크	sql.memberCheckID()
 	@Override
-	public int memberCheckId() throws Exception {
-		return sql.selectOne("memberMapper.memberCheckId");
+	public int memberCheckID(MemberVO vo) throws Exception {
+		return sql.selectOne("memberMapper.memberCheckID", vo);
 	}
 }

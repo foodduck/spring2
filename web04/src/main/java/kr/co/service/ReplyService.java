@@ -7,10 +7,10 @@ import kr.co.vo.ReplyVO;
 public interface ReplyService {
 	
 	//댓글 목록	sql.replyList() replyVO
-	public List<ReplyVO> replyList() throws Exception;
+	public List<ReplyVO> replyList(int rno) throws Exception;
 	
 	//댓글 상세보기	sql.replyRead() replyVO
-	public ReplyVO replyRead() throws Exception;
+	public ReplyVO replyRead(int rno) throws Exception;
 	
 	//댓글 추가	sql.replyInsert(replyVO)
 	public void replyInsert(ReplyVO replyVO) throws Exception;

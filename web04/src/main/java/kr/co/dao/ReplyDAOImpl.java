@@ -14,14 +14,14 @@ public class ReplyDAOImpl implements ReplyDAO {
 	
 	//댓글 목록	sql.replyList() replyVO
 	@Override
-	public List<ReplyVO> replyList() throws Exception {
-		return sql.selectList("replyMapper.replyList");
+	public List<ReplyVO> replyList(int rno) throws Exception {
+		return sql.selectList("replyMapper.replyList", rno);
 	}
 	
 	//댓글 상세보기	sql.replyRead() replyVO
 	@Override
-	public ReplyVO replyRead() throws Exception {
-		return sql.selectOne("replyMapper.replyRead");
+	public ReplyVO replyRead(int rno) throws Exception {
+		return sql.selectOne("replyMapper.replyRead", rno);
 	}
 	
 	//댓글 추가	sql.replyInsert(replyVO)

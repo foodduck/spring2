@@ -7,4 +7,7 @@
 <fullyQualifiedTypeName name="org.junit.Before"/>
 <fullyQualifiedTypeName name="kr.co.vo.SampleVO"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="kr.co.vo.Criteria"/>
 </qualifiedTypeNameHistroy>

@@ -7,10 +7,7 @@ public class Criteria {
 	private int rowStart = 1;	//현재 페이지의 첫번째 줄 글번호
 	private int rowEnd;	//현제 페이지의 마지막 줄 글번호
 	
-	public Criteria(int page, int perPageNum) {
-		this.page = page;
-		this.perPageNum = perPageNum;
-	}
+	
 	public int getPage() {
 		return page;
 	}

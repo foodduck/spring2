@@ -13,14 +13,14 @@ public class ReplyServiceImpl implements ReplyService {
 	
 	//댓글 목록	dao.replyList() replyVO
 	@Override
-	public List<ReplyVO> replyList() throws Exception {
-		return dao.replyList();
+	public List<ReplyVO> replyList(int rno) throws Exception {
+		return dao.replyList(rno);
 	}
 	
 	//댓글 상세보기	dao.replyRead() replyVO
 	@Override
-	public ReplyVO replyRead() throws Exception {
-		return dao.replyRead();
+	public ReplyVO replyRead(int rno) throws Exception {
+		return dao.replyRead(rno);
 	}
 	
 	//댓글 추가	dao.replyInsert(replyVO)

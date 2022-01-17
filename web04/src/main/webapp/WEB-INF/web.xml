@@ -50,7 +50,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>MemberController</servlet-name>
-    <url-pattern>/MemberController</url-pattern>
+    <url-pattern>/member</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>

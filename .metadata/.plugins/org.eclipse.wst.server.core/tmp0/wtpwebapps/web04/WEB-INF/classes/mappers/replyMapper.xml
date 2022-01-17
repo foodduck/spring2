@@ -3,5 +3,24 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="replyMapper">
-
+	<!-- 댓글 목록 -->
+	<select id="replyList" resultType="kr.co.vo.ReplyVO">
+		select RNO, CONTENT, WRITER, REGDATE from MP_REPLY where BNO=#{bno}
+	</select>
+	<!-- 댓글 상세보기 -->
+	<select id="replyRead" resultType="kr.co.vo.ReplyVO">
+		select RNO, BNO, CONTENT, WRITER, REGDATE from MP_REPLY where BNO=#{bno}
+	</select>
+	<!-- 댓글 추가 -->
+	<insert id="replyInsert" parameterType="kr.co.vo.ReplyVO">
+		insert into MP_REPLY(BNO, RNO, CONTENT, WRITER) values (#{bno}, MP_REPLY_SEQ.NEXTVAL, #{content}, #{writer})
+	</insert>
+	<!-- 댓글 수정 -->
+	<update id="replyUpdate" parameterType="kr.co.vo.ReplyVO">
+		update MP_REPLY set CONTENT=#{content} where RNO=#{rno}
+	</update>
+	<!-- 댓글 삭제 -->
+	<delete id="replyDelete" parameterType="kr.co.vo.ReplyVO">
+		delete from MP_REPLY where RNO = #{rno}
+	</delete>
 </mapper>
