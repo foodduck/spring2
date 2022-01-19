@@ -4,9 +4,9 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
-	<typeAliases>
+	<!-- <typeAliases>
 		<package name="kr.co.controller" />
-	</typeAliases>
+	</typeAliases> -->
 
 </configuration>
 

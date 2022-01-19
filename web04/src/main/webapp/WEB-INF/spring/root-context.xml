@@ -40,7 +40,6 @@
 	<tx:annotation-driven transaction-manager="transactionManager"/>
 	
 	<!-- 데이터 바인딩이 필요한 프로젝트 패키지 지정 -->
-	<context:component-scan base-package="kr.co.controller"></context:component-scan>
 	<context:component-scan base-package="kr.co.service"></context:component-scan>
 	<context:component-scan base-package="kr.co.dao"></context:component-scan>
 	<context:component-scan base-package="kr.co.vo"></context:component-scan>
