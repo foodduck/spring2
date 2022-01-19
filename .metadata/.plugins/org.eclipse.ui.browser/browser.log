@@ -33,3 +33,15 @@
 1월 10, 2022 18:29:23.93 [18084:4616:0110/182923.934:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status ended.
 1월 10, 2022 18:29:23.93 [18084:10280:0110/182923.939:ERROR:device_event_log_impl.cc(214)] [18:29:23.939] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
 1월 10, 2022 18:31:38.54 [18084:2352:0110/183138.546:ERROR:database.cc(1773)] History SQLite error: code 1555 errno 0: UNIQUE constraint failed: context_annotations.visit_id sql: INSERT INTO context_annotations( visit_id,context_annotation_flags,duration_since_last_visit,page_end_reason,total_foreground_duration )VALUES(?,?,?,?,?)
+
+1월 19, 2022 18:45:20.29 NEW SESSION
+1월 19, 2022 18:45:20.29 [1828:9560:0119/184520.289:ERROR:chrome_browser_main_extra_parts_metrics.cc(227)] START: ReportBluetoothAvailability(). If you don't see the END: message, this is crbug.com/1216328.
+1월 19, 2022 18:45:20.32 [1828:9560:0119/184520.289:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] END: ReportBluetoothAvailability()
+1월 19, 2022 18:45:20.32 [1828:9560:0119/184520.289:ERROR:chrome_browser_main_extra_parts_metrics.cc(235)] START: GetDefaultBrowser(). If you don't see the END: message, this is crbug.com/1216328.
+1월 19, 2022 18:45:20.32 [1828:9560:0119/184520.293:ERROR:chrome_browser_main_extra_parts_metrics.cc(239)] END: GetDefaultBrowser()
+1월 19, 2022 18:45:20.32 [1828:4632:0119/184520.297:ERROR:device_event_log_impl.cc(214)] [18:45:20.297] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.
+1월 19, 2022 18:51:32.46 [5932:10968:0119/185132.463:ERROR:chrome_browser_main_extra_parts_metrics.cc(227)] START: ReportBluetoothAvailability(). If you don't see the END: message, this is crbug.com/1216328.
+1월 19, 2022 18:51:32.46 [5932:10968:0119/185132.464:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] END: ReportBluetoothAvailability()
+1월 19, 2022 18:51:32.46 [5932:10968:0119/185132.464:ERROR:chrome_browser_main_extra_parts_metrics.cc(235)] START: GetDefaultBrowser(). If you don't see the END: message, this is crbug.com/1216328.
+1월 19, 2022 18:51:32.46 [5932:10968:0119/185132.466:ERROR:chrome_browser_main_extra_parts_metrics.cc(239)] END: GetDefaultBrowser()
+1월 19, 2022 18:51:32.47 [5932:6288:0119/185132.471:ERROR:device_event_log_impl.cc(214)] [18:51:32.471] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.

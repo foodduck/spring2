@@ -1,7 +1,6 @@
 package kr.co.controller;
 
 import javax.inject.Inject;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -19,7 +18,7 @@ import kr.co.vo.MemberVO;
 
 @Controller
 @RequestMapping("/member/*")
-public class MemberController extends HttpServlet {
+public class MemberController {
 	private final static Logger logger = LoggerFactory.getLogger(MemberController.class);    
 	@Inject
 	private MemberService service;

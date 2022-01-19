@@ -21,6 +21,7 @@ public class PageMaker {
 	}
 	public void setTotalCount(int totalCount) {
 		this.totalCount = totalCount;
+		calcData();
 	}
 	public int getStartPage() {
 		return startPage;
@@ -64,23 +65,36 @@ public class PageMaker {
 				+ prev + ", next=" + next + ", displayPageNum=" + displayPageNum + ", cri=" + cri + "]";
 	}
 	
-	private void calcData() {	//시작페이지, 끝페이지, 전체페이지 수, 이전/다음페이지 존재 걔산
-		endPage = (int) (Math.ceil(cri.getPage()/(double) displayPageNum) * displayPageNum); 
-		startPage = (endPage - displayPageNum) +1;
-		
-	
-	
+	private void calcData() {	//시작페이지, 끝페이지, 전체페이지 수, 이전/다음페이지 존재 계산
+		endPage = (int) (Math.ceil(cri.getPage() / (double)displayPageNum) * displayPageNum);
+		startPage = (endPage - displayPageNum) + 1;
+	  
+		int tempEndPage = (int) (Math.ceil(totalCount / (double)cri.getperPageNum()));
+		if (endPage > tempEndPage) {
+			endPage = tempEndPage;
+		}
+		prev = startPage == 1 ? false : true;
+		next = endPage * cri.getperPageNum() >= totalCount ? false : true;
 	}
 	public String makeQuery(int page) {	//입력된 검색어에 따른 계산된 페이지의 파라미터를 URI로 전달하는 메서드
-		SearchCriteria sc = new SearchCriteria();
-		UriComponents uriComponents = UriComponentsBuilder.newInstance()
-				.queryParam("page", page)
-				.queryParam("perPageNum", cri.getperPageNum())
-				.queryParam("searchType", sc.getSearchType())
-				.queryParam("keyword", encoding(sc.getKeyword()))
-				.build();
-		return uriComponents.toUriString();
+		UriComponents uriComponents =
+				UriComponentsBuilder.newInstance()
+								    .queryParam("page", page)
+									.queryParam("perPageNum", cri.getperPageNum())
+									.build();
+				   
+				return uriComponents.toUriString();
 				
+	}
+	public String makeSearch(int page) {
+		
+		UriComponents uriComponents = UriComponentsBuilder.newInstance()
+		    .queryParam("page", page)
+		    .queryParam("perPageNum", cri.getperPageNum())
+		    .queryParam("searchType", ((SearchCriteria)cri).getSearchType())
+		    .queryParam("keyword", encoding(((SearchCriteria)cri).getKeyword()))
+		    .build(); 
+		return uriComponents.toUriString();  
 	}
 	
 	private String encoding(String keyword) {

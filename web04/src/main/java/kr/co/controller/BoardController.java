@@ -60,9 +60,9 @@ public class BoardController {
 	public String list(Model model, @ModelAttribute("scri") SearchCriteria scri) throws Exception {
 		logger.info("boardList");
 		//model객체: getter가 필요없는 application 객체
-		model.addAttribute("boardlist", service.boardList(scri));
+		model.addAttribute("boardList", service.boardList(scri));
 		PageMaker pageMaker = new PageMaker();
-		//pageMaker. setCri(scri);
+		pageMaker. setCri(scri);
 		pageMaker.setTotalCount(service.boardCount(scri));
 		model.addAttribute("pageMaker", pageMaker);
 		

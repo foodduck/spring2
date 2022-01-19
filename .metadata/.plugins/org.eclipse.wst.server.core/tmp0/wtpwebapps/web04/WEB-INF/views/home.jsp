@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>
-	Hello world!  
+	<a href="board/boardList">게시판목록</a>
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
