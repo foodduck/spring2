@@ -34,10 +34,10 @@ public class BoardController {
 	private final static Logger logger = LoggerFactory.getLogger(BoardController.class);
    
 	@Inject
-	private BoardService service;
+	BoardService service;
 	
 	@Inject
-	private ReplyService replyService;
+	ReplyService replyService;
 	
 	//게시판 글작성 화면으로 이동
 	@RequestMapping(value="/boardWriteView", method=RequestMethod.GET)
@@ -52,12 +52,12 @@ public class BoardController {
 		service.boardInsert(boardVO, mpRequest);
 		return "redirect:/board/boardList";	//Dispatcher, forward, sendredirect 모두 합쳐진 형태
 		//데이터까지 같이 넘기게 된다.
-		//return "board/list";	데이터를 넘기지 않는다.
+		//return "board/boardList";	데이터를 넘기지 않는다.
 	}
 	
 	//게시판 글 목록		
 	@RequestMapping(value="/boardList", method=RequestMethod.GET)
-	public String list(Model model, @ModelAttribute("scri") SearchCriteria scri) throws Exception {
+	public String boardList(Model model, @ModelAttribute("scri") SearchCriteria scri) throws Exception {
 		logger.info("boardList");
 		//model객체: getter가 필요없는 application 객체
 		model.addAttribute("boardList", service.boardList(scri));
@@ -70,11 +70,11 @@ public class BoardController {
 	}
 	
 	//게시판 글 보기
-	@RequestMapping(value="boardRead", method=RequestMethod.GET)
+	@RequestMapping(value="boardReadView", method=RequestMethod.GET)
 	public String boardRead(BoardVO boardVO, @ModelAttribute("scri") SearchCriteria scri, Model model) throws Exception {
-		logger.info("boardRead");
+		logger.info("boardReadView");
 		
-		model.addAttribute("boardRead", service.boardRead(boardVO.getBno()));
+		model.addAttribute("boardReadView", service.boardRead(boardVO.getBno()));
 		model.addAttribute("scri", scri);
 
 		List<ReplyVO> replyList = replyService.replyList(boardVO.getBno());
@@ -105,7 +105,7 @@ public class BoardController {
 						 @RequestParam(value="fileNoDel[]") String[] files,
 						 @RequestParam(value="fileNameDel[]") String[] fileNames,
 						 MultipartHttpServletRequest mpRequest) throws Exception {
-		logger.info("update");
+		logger.info("boardUpdate");
 		service.boardUpdate(boardVO, files, fileNames, mpRequest);
 
 		rttr.addAttribute("page", scri.getPage());
@@ -143,7 +143,7 @@ public class BoardController {
 		rttr.addAttribute("searchType", scri.getSearchType());
 		rttr.addAttribute("keyword", scri.getKeyword());
 
-		return "redirect:/board/boardRead";
+		return "redirect:/board/boardReadView";
 	}
 	//댓글 수정 페이지로 이동
 	@RequestMapping(value = "/replyUpdateView", method = RequestMethod.GET)
@@ -168,7 +168,7 @@ public class BoardController {
 		rttr.addAttribute("searchType", scri.getSearchType());
 		rttr.addAttribute("keyword", scri.getKeyword());
 
-		return "redirect:/board/boardRead";
+		return "redirect:/board/boardReadView";
 	}
 	//댓글 삭제 페이지로 이동
 	@RequestMapping(value = "/replyDeleteView", method = RequestMethod.GET)

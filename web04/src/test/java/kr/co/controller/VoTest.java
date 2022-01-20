@@ -15,7 +15,7 @@ import kr.co.vo.SampleVO;
 	"file:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml"})
 public class VoTest {
 	@Autowired
-	//Oprivate WebApplicationContext ctx;
+	//private WebApplicationContext ctx;
 	
 	
 	
