@@ -24,40 +24,45 @@
     <servlet-name>appServlet</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
-  <filter>
-    <filter-name>encodingFilter</filter-name>
-    <filter-class>
-			org.springframework.web.filter.CharacterEncodingFilter
-		</filter-class>
-    <init-param>
-      <param-name>encoding</param-name>
-      <param-value>UTF-8</param-value>
-    </init-param>
-    <init-param>
-      <param-name>forceEncoding</param-name>
-      <param-value>true</param-value>
-    </init-param>
-  </filter>
-  <filter-mapping>
-    <filter-name>encodingFilter</filter-name>
-    <url-pattern>/*</url-pattern>
-  </filter-mapping>
+  
+  	<filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>
+            org.springframework.web.filter.CharacterEncodingFilter
+        </filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+  
   <servlet>
     <description></description>
     <display-name>MemberController</display-name>
     <servlet-name>MemberController</servlet-name>
     <servlet-class>kr.co.controller.MemberController</servlet-class>
   </servlet>
+  
   <servlet-mapping>
     <servlet-name>MemberController</servlet-name>
     <url-pattern>/member</url-pattern>
   </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>BoardController</display-name>
     <servlet-name>BoardController</servlet-name>
     <servlet-class>kr.co.controller.BoardController</servlet-class>
   </servlet>
+  
   <servlet-mapping>
     <servlet-name>BoardController</servlet-name>
     <url-pattern>/board</url-pattern>

@@ -7,6 +7,10 @@ public class Criteria {
 	private int rowStart = 1;	//현재 페이지의 첫번째 줄 글번호
 	private int rowEnd;	//현제 페이지의 마지막 줄 글번호
 	
+	public Criteria() {
+		this.page = 1;
+		this.perPageNum = 10;
+	}
 	
 	public int getPage() {
 		return page;
@@ -19,7 +23,7 @@ public class Criteria {
 		this.page = page;
 	}
 	public int getperPageNum() {
-		return perPageNum;
+		return this.perPageNum;
 	}
 	public void setperPageNum(int perPageNum) {
 		if (perPageNum <= 0 || perPageNum > 100) {
@@ -42,6 +46,10 @@ public class Criteria {
 	public void setRowEnd(int rowEnd) {
 		this.rowEnd = rowEnd;
 	}
+	public int getPageStart() {
+		return (this.page - 1) * perPageNum;
+	}
+	
 	@Override
 	public String toString() {
 		return "Criteria [page=" + page + ", perPageNum=" + perPageNum + ", rowStart=" + rowStart + ", rowEnd=" + rowEnd

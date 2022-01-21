@@ -9,7 +9,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 //페이지내이션에서 한 페이지당 글을 저장하고 다루기 위한 VO 클래스
 public class PageMaker {
 	private int totalCount;	//전체 글의 수
-	private int startPage;	//현재 클립에서 시작 페이지 번호
+	private int startPage=1;	//현재 클립에서 시작 페이지 번호
 	private int endPage;	//현재 클립에서 끝 페이지 번호
 	private boolean prev;	//이전 페이지 번호(이전 클립에서의 마지막 페이지 번호)
 	private boolean next;	//다음 페이지 번호(다음 클립에서의 시작 페이지 번호)
@@ -78,12 +78,12 @@ public class PageMaker {
 	}
 	public String makeQuery(int page) {	//입력된 검색어에 따른 계산된 페이지의 파라미터를 URI로 전달하는 메서드
 		UriComponents uriComponents =
-				UriComponentsBuilder.newInstance()
-								    .queryParam("page", page)
-									.queryParam("perPageNum", cri.getperPageNum())
-									.build();
-				   
-				return uriComponents.toUriString();
+		UriComponentsBuilder.newInstance()
+						    .queryParam("page", page)
+							.queryParam("perPageNum", cri.getperPageNum())
+							.build();
+		   
+		return uriComponents.toUriString();
 				
 	}
 	public String makeSearch(int page) {

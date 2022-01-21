@@ -74,7 +74,7 @@
 	
 	<!-- 첨부파일 변경 -->
 		<update id="fileUpdate" parameterType="hashMap">
-			update mp_file set del_gb ='y' where file_no = #{FILE_NO}
+			update mp_file set del_gb ='Y' where file_no = #{FILE_NO}
 		</update>
 	
 	<!-- 게시판 조회수 증가 -->
