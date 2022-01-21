@@ -119,17 +119,17 @@
 		<list key="COLUMN_WIDTHS">
 			<item value="40"/>
 			<item value="400"/>
-			<item value="118"/>
+			<item value="513"/>
 		</list>
 		<list key="SASH_WEIGHTS">
-			<item value="714"/>
-			<item value="285"/>
+			<item value="594"/>
+			<item value="405"/>
 		</list>
 		<section name="DialogBoundsSettings">
-			<item key="DIALOG_HEIGHT" value="500"/>
-			<item key="DIALOG_WIDTH" value="600"/>
-			<item key="DIALOG_X_ORIGIN" value="551"/>
-			<item key="DIALOG_Y_ORIGIN" value="300"/>
+			<item key="DIALOG_HEIGHT" value="616"/>
+			<item key="DIALOG_WIDTH" value="995"/>
+			<item key="DIALOG_X_ORIGIN" value="1146"/>
+			<item key="DIALOG_Y_ORIGIN" value="225"/>
 			<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 		</section>
 	</section>

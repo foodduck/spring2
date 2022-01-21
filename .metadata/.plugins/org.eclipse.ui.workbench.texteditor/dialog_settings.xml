@@ -8,6 +8,13 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="userPw"/>
+			<item value="userId"/>
+			<item value="replyList"/>
+			<item value="replyList]"/>
+			<item value="read."/>
+			<item value="StartPage"/>
+			<item value="list"/>
 			<item value="disPlayPageNum"/>
 			<item value="getUserName"/>
 			<item value="getUserPass"/>
@@ -16,15 +23,11 @@
 			<item value="delete"/>
 			<item value="updateView"/>
 			<item value="read"/>
-			<item value="perPageNumNum"/>
-			<item value="perPage"/>
-			<item value="Board"/>
-			<item value="$"/>
-			<item value="up"/>
-			<item value="Moc"/>
-			<item value="moc"/>
 		</list>
 		<list key="replacehistory">
+			<item value="userid"/>
+			<item value="boardRead."/>
+			<item value="boardList"/>
 			<item value="getUsername"/>
 			<item value="getUserpass"/>
 			<item value="getUserid"/>

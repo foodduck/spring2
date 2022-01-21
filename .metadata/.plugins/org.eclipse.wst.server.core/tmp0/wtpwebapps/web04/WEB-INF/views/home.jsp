@@ -9,6 +9,9 @@
 </head>
 <body>
 <h1>
+	<a href="/member/loginForm">로그인</a>
+	<a href="/member/reg">회원가입</a>
+	<a href="/board/boardWriteView">글 작성</a>
 	<a href="board/boardList">게시판목록</a>
 </h1>
 

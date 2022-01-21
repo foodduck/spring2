@@ -21,7 +21,7 @@ create sequence mp_reply_seq start with 1 increment by 1 minvalue 0;
 create table mp_reply (bno int, rno int not null, content varchar2(1000) not null, 
 writer varchar2(50) not null, regdate date default sysdate, constraint mp_replay_group_pk primary key(bno, rno));
 
-insert into mp_reply values (1, 1, '댓글내용', '게시자', '');
+insert into mp_reply values (1, mp_reply_seq.nextval, '댓글내용', '게시자', sysdate);
 
 --파일
 create sequence mp_file_seq start with 1 increment by 1 nomaxvalue nocache;

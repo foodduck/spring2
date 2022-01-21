@@ -74,7 +74,7 @@ public class BoardController {
 	public String boardRead(BoardVO boardVO, @ModelAttribute("scri") SearchCriteria scri, Model model) throws Exception {
 		logger.info("boardReadView");
 		
-		model.addAttribute("boardReadView", service.boardRead(boardVO.getBno()));
+		model.addAttribute("boardRead", service.boardRead(boardVO.getBno()));
 		model.addAttribute("scri", scri);
 
 		List<ReplyVO> replyList = replyService.replyList(boardVO.getBno());
@@ -148,7 +148,7 @@ public class BoardController {
 	//댓글 수정 페이지로 이동
 	@RequestMapping(value = "/replyUpdateView", method = RequestMethod.GET)
 	public String replyUpdateView(ReplyVO vo, SearchCriteria scri, Model model) throws Exception {
-		logger.info("reply Insert");
+		logger.info("reply UpdateView");
 
 		model.addAttribute("replyUpdate", replyService.replyRead(vo.getRno()));
 		model.addAttribute("scri", scri);
@@ -158,7 +158,7 @@ public class BoardController {
 	//댓글 수정
 	@RequestMapping(value = "/replyUpdate", method = RequestMethod.POST)
 	public String replyUpdate(ReplyVO vo, SearchCriteria scri, RedirectAttributes rttr) throws Exception {
-		logger.info("reply Insert");
+		logger.info("reply Update");
 
 		replyService.replyUpdate(vo);
 
@@ -173,8 +173,15 @@ public class BoardController {
 	//댓글 삭제 페이지로 이동
 	@RequestMapping(value = "/replyDeleteView", method = RequestMethod.GET)
 	public String replyDeleteView(ReplyVO vo, SearchCriteria scri, Model model) throws Exception {
-		logger.info("reply Insert");
-
+		logger.info("reply InsertView");
+		
+		System.out.println("글번호:"+vo.getBno());
+		System.out.println("댓글번호:"+vo.getRno());
+		System.out.println("이 글의 페이지:"+scri.getPage());
+		System.out.println("표시하는 페이지번호:"+scri.getperPageNum());
+		System.out.println("검색 카테고리:"+scri.getSearchType());
+		System.out.println("검색어:"+scri.getKeyword());
+		
 		model.addAttribute("replyDelete", replyService.replyRead(vo.getRno()));
 		model.addAttribute("scri", scri);
 
@@ -183,21 +190,22 @@ public class BoardController {
 	// 댓글 삭제
 		@RequestMapping(value = "/replyDelete", method = RequestMethod.POST)
 		public String replyDelete(ReplyVO vo, SearchCriteria scri, RedirectAttributes rttr) throws Exception {
-			logger.info("reply Insert");
-
+			logger.info("reply Delete");
+		
 			replyService.replyDelete(vo);
-
+			
 			rttr.addAttribute("bno", vo.getBno());
 			rttr.addAttribute("page", scri.getPage());
 			rttr.addAttribute("perPageNum", scri.getperPageNum());
 			rttr.addAttribute("searchType", scri.getSearchType());
 			rttr.addAttribute("keyword", scri.getKeyword());
 
-			return "redirect:/board/boardRead";
+			return "redirect:/board/boardReadView";
 		}
 
 		@RequestMapping(value = "/fileDown")
 		public void fileDown(@RequestParam Map<String, Object> map, HttpServletResponse response) throws Exception {
+			logger.info("file Down");
 			Map<String, Object> resultMap = service.fileDown(map);
 			String storedFileName = (String) resultMap.get("STORED_FILE_NAME");
 			String originalFileName = (String) resultMap.get("ORG_FILE_NAME");
