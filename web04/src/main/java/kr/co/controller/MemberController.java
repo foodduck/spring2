@@ -64,7 +64,7 @@ public class MemberController {
 	}
 	//로그인 처리
 	@RequestMapping(value = "/memberLogin", method = RequestMethod.POST)
-	public String login(MemberVO vo, HttpSession session, RedirectAttributes rttr) throws Exception {
+	public String memberLogin(MemberVO vo, HttpSession session, RedirectAttributes rttr) throws Exception {
 		logger.info("post login");
 		
 		session.getAttribute("member");

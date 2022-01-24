@@ -37,7 +37,7 @@
 	</insert>
 	<!-- 글 수정 -->
 		<update id="boardUpdate" parameterType="kr.co.vo.BoardVO" >
-			update mp_board set title=#{title} content=#{content} writer=#{writer} where bno=#{bno}
+			update mp_board set title=#{title}, content=#{content} where bno=#{bno}
 		</update>
 	<!-- 글 삭제 -->
 		<delete id="boardDelete" parameterType="int">

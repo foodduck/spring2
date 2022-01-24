@@ -9,12 +9,12 @@
 </head>
 <body>
 <h1>
-	<a href="/member/loginForm">로그인</a>
-	<a href="/member/reg">회원가입</a>
-	<a href="/board/boardWriteView">글 작성</a>
-	<a href="board/boardList">게시판목록</a>
+	<a href="/member/memberLoginView">login</a>
+	<a href="/member/memberJoinView">sign in</a>
+	<a href="/board/boardWriteView">boardWrite</a>
+	<a href="board/boardList">boardList</a>
 </h1>
-
+<h2>한글</h2>
 <P>  The time on the server is ${serverTime}. </P>
 </body>
 </html>

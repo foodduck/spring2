@@ -82,6 +82,9 @@ public class BoardController {
 
 		List<Map<String, Object>> fileList = service.fileRead(boardVO.getBno());
 		model.addAttribute("file", fileList);
+		
+		service.boardHit(boardVO.getBno());
+		
 		return "board/boardReadView";
 	}
 	//글 수정페이지로 이동
