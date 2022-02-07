@@ -33,7 +33,7 @@
 	</delete>
 	<!-- 로그인 -->
 	<select id="memberLogin" resultType="kr.co.vo.MemberVO">
-		select  userid, userpass, email, username, regdate from mp_member where userid = #{userid} and userpass=#{userpass}
+		select userid, userpass, email, username, regdate from mp_member where userid = #{userid} and userpass=#{userpass}
 	</select>
 	<!-- 패스워드 체크 -->
 	<select id="memberCheckPW" resultType="int">

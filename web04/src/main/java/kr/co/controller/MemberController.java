@@ -9,7 +9,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -21,7 +20,7 @@ import kr.co.vo.MemberVO;
 public class MemberController {
 	private final static Logger logger = LoggerFactory.getLogger(MemberController.class);    
 	@Inject
-	private MemberService service;
+	MemberService service;
 	
 	@Inject
 	BCryptPasswordEncoder pwdEncoder;
@@ -132,7 +131,7 @@ public class MemberController {
 	//패스워드 체크
 	@ResponseBody
 	@RequestMapping(value="/memberCheckPW", method = RequestMethod.POST)
-	public boolean passChk(MemberVO vo) throws Exception {
+	public boolean memberCheckPW(MemberVO vo) throws Exception {
 
 		MemberVO login = service.memberLogin(vo);
 		boolean pwdChk = pwdEncoder.matches(vo.getUserpass(), login.getUserpass());
@@ -140,18 +139,17 @@ public class MemberController {
 	}
 	
 	int result = 0;
-	//아이디 중복 확인
+	
+	//아이디 중복체크
 	@ResponseBody
-	@RequestMapping(value="/memberCheckID", method = RequestMethod.GET)
-	public int idChk2(@RequestParam("userid") String userid, HttpSession ses) throws Exception {
-		MemberVO mem = new MemberVO(); 
-		mem.setUserid(userid);
-		result = (int) service.memberCheckID(mem);
-		System.out.println("결과 : "+result);
+	@RequestMapping(value="/memberCheckID", method = RequestMethod.POST)
+	public int memberCheckID(MemberVO vo, HttpSession sess) throws Exception {
+		result = service.memberCheckID(vo);
+		System.out.println("반환결과 : "+result);
 		if(result==0) {
-			ses.setAttribute("msg", "ok");
+			sess.setAttribute("msg", "ok");
 		} else {
-			ses.setAttribute("msg", "no");
+			sess.setAttribute("msg", "no");
 		}
 		return result;
 	}

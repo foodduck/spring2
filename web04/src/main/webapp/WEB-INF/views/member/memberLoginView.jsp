@@ -23,15 +23,15 @@
 			<fieldset class="frm_fr">
 				<ul class="form_group has-feedback">
 					<li class="login_row">
-						<input type="text" class="form-control" id="userid" name="userid" placeholder="아이디 입력">
+						<input type="text" class="form-control" id="userid" name="userid" placeholder="아이디 입력" required>
 					</li> 
 					<li class="login_row">
-						<input type="password" id="userpass" name="userpass" class="form-control" maxlength="20" required />
+						<input type="password" id="userpass" name="userpass" class="form-control" maxlength="20"  placeholder="●●●●" required />
 					</li> 
 					<li class="login_row"><br>
 						<input type="submit" class="btn btn-primary" value="로그인" id="login_submit" />
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<button type="button" class="btn btn-primary" onclick="location.href='/member/memberLogin">회원가입</button>
+						<button type="button" class="btn btn-primary" onclick="location.href='/member/memberJoinView'">회원가입</button>
 					</li>
 				</ul>
 			</fieldset>

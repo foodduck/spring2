@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="userpass"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="&lt;!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-war-plugin --&gt;"/>
+			<item value="war-plugin"/>
+			<item value="plugin"/>
+			<item value="spring-test"/>
+			<item value="spring-tests"/>
 			<item value="userPass"/>
 			<item value="userName"/>
 			<item value="cancle"/>
@@ -18,11 +23,6 @@
 			<item value="userPw"/>
 			<item value="userId"/>
 			<item value="replyList"/>
-			<item value="replyList]"/>
-			<item value="read."/>
-			<item value="StartPage"/>
-			<item value="list"/>
-			<item value="disPlayPageNum"/>
 		</list>
 		<list key="replacehistory">
 			<item value="userpass"/>

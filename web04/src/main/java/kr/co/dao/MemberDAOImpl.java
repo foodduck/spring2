@@ -65,8 +65,8 @@ public class MemberDAOImpl implements MemberDAO {
 	
 	//로그인	sql.memberLogin()
 	@Override
-	public MemberVO memberLogin(MemberVO memberVO) throws Exception {
-		return sql.selectOne("memberMapper.memberLogin", memberVO);
+	public MemberVO memberLogin(MemberVO vo) throws Exception {
+		return sql.selectOne("memberMapper.memberLogin", vo);
 	}
 
 	//패스워드 체크	sql.memberCheckPW()
