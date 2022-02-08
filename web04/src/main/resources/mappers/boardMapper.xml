@@ -57,8 +57,8 @@
 
 	<!-- 첨부파일 추가(업로드), 테이블에서 2개 이상의 값을 가져올때 hashMap -->
 		<insert id="fileInsert" parameterType="hashMap">
-			insert into mp_file(file_no, bno, org_file_name, stroed_file_name, file_size) 
-			values (mp_file_seq.nextval, #{bno}, #{org_file_name}, #{STORED_FILE_NAME}, #{FILE_SIZE})
+			insert into mp_file(file_no, BNO, org_file_name, stored_file_name, file_size) 
+			values (mp_file_seq.nextval, #{BNO}, #{org_file_name}, #{STORED_FILE_NAME}, #{FILE_SIZE})
 		</insert>
 	
 	<!-- 첨부파일 조회 round(x, y): x를 소수 y번째까지 표시하면서 y+1번째 자리에서 반올림 -->

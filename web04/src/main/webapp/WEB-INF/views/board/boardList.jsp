@@ -48,7 +48,7 @@
 						 
 						<div class="col-xs-10 col-sm-10">
 							<div class="input-group">
-								<input type="text" name="keyword" id="keywordInput" value="${scri.keyword}" class="form-control"/>
+								<input type="text" name="keyword" id="keywordInput" value="${scri.keyword}" class="form-control" autofocus />
 								<span class="input-group-btn">
 									<button id="searchBtn" type="button" class="btn btn-default">검색</button> 	
 								</span>

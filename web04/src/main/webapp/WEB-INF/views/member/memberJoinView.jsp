@@ -104,7 +104,7 @@
 			<form action="/member/registery" method="post" id="regForm" name="vo" onsummit="return regData(this)">
 				<div class="form-group has-feedback">
 					<label class="control-label" for="userid">아이디</label>
-					<input class="form-control" type="text" id="userid" name="userid" pattern="^[A-za-z]{5,15}$" placeholder="5~15자의 영문과 숫자" required />
+					<input class="form-control" type="text" id="userid" name="userid" pattern="^[A-za-z]{5,15}$" placeholder="5~15자의 영문과 숫자" autofocus required />
 					<button class="idChkBtn" type="button" id="idChkBtn" onclick="fn_idChk();">중복확인</button>
 					<input type="hidden" id="idChk" value="N"/>
 				</div>

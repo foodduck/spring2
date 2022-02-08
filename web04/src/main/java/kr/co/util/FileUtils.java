@@ -60,10 +60,15 @@ public class FileUtils {
 				}
 				listMap = new HashMap<String, Object>();
 				listMap.put("BNO", bno);
+				System.out.println(bno);
 				listMap.put("ORG_FILE_NAME", originalFileName);
+				System.out.println(originalFileName);
 				listMap.put("STORED_FILE_NAME", storedFileName);
+				System.out.println(storedFileName);
 				listMap.put("FILE_SIZE", multipartFile.getSize());
+				System.out.println(multipartFile.getSize());
 				list.add(listMap);
+				System.out.println(listMap);
 			}
 		}
 		return list;

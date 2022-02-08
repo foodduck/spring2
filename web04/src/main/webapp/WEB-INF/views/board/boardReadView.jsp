@@ -165,7 +165,7 @@
 					<div class="form-group">
 						<label for="content" class="col-sm-2 control-label">댓글 내용</label>
 						<div class="col-sm-10">
-							<input type="text" id="content" name="content" class="form-control"/>
+							<input type="text" id="content" name="content" class="form-control" autofocus />
 						</div>
 					</div>
 					
