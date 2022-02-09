@@ -28,12 +28,7 @@
 				$("#userpass").focus();
 				return false;
 			}
-			
-			
-		
 		}
-		
-		
 		$("#login_submit").click(function() {
 			var userid = $("#userid").val();
 			if(userid=="") {

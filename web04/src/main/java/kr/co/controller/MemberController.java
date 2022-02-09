@@ -70,21 +70,25 @@ public class MemberController {
 		MemberVO login = service.memberLogin(vo);
 		
 		boolean pwdMatch;
-		if(login != null) {
-			pwdMatch = pwdEncoder.matches(vo.getUserpass(), login.getUserpass());
-		} else {
-			pwdMatch = false;
-		}
 		
-		if(login != null && pwdMatch == true) {
-			session.setAttribute("member", login);
-			rttr.addFlashAttribute("msg", "로그인 성공");
-			return "redirect:/";
-		} else {
-			session.setAttribute("member", null);
-			rttr.addFlashAttribute("msg", "아이디 또는 비밀번호가 올바르지 않습니다.");
-			return "redirect:/member/memberLoginView";
-		}
+			if(login != null) {
+				pwdMatch = pwdEncoder.matches(vo.getUserpass(), login.getUserpass());
+				
+			} else {
+				pwdMatch = false;
+			}
+			
+			if(login != null && pwdMatch == true) {
+				System.out.println("로그인 성공");
+				session.setAttribute("member", login);
+				rttr.addFlashAttribute("msg", "로그인 성공");
+				return "redirect:/";
+			} else {
+				System.out.println("로그인 실패");
+				session.setAttribute("member", null);
+				rttr.addFlashAttribute("msg", "아이디 또는 비밀번호가 올바르지 않습니다.");
+				return "redirect:/member/memberLoginView";
+			}
 	}
 	//로그아웃
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)

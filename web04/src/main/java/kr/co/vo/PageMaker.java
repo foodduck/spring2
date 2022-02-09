@@ -6,6 +6,7 @@ import java.net.URLEncoder;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
+
 //페이지내이션에서 한 페이지당 글을 저장하고 다루기 위한 VO 클래스
 public class PageMaker {
 	private int totalCount;	//전체 글의 수

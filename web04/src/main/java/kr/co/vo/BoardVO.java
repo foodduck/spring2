@@ -12,8 +12,8 @@ import java.util.Date;
 //여러개의 클래스로 나누어주면 보조기능을 갖는 클래스를 더 추가하거나, 해당 보조클래스를 수정하면 됨 (모듈화)
 public class BoardVO {
 	private int bno;
-	private String title;
-	private String content;
+	private String title = "no title";
+	private String content = "no content";
 	private String writer;
 	private Date regdate;
 	private int hit;

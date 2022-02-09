@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="qr"/>
+		<item key="selection" value="inject"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="inject"/>
+			<item value="person"/>
+			<item value="servlet-api"/>
+			<item value="jackson"/>
+			<item value="json"/>
 			<item value="qr"/>
 			<item value="idChkBtn"/>
 			<item value="bno"/>
@@ -18,13 +23,9 @@
 			<item value="spring-tests"/>
 			<item value="userPass"/>
 			<item value="userName"/>
-			<item value="cancle"/>
-			<item value="cencle"/>
-			<item value=".cencle"/>
-			<item value="hit"/>
-			<item value="Hit"/>
 		</list>
 		<list key="replacehistory">
+			<item value="member"/>
 			<item value="BNO"/>
 			<item value="userpass"/>
 			<item value="username"/>
@@ -39,7 +40,6 @@
 			<item value="getUserid"/>
 			<item value="dao"/>
 			<item value="boardDelete"/>
-			<item value="boardUpdateView"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

@@ -2,9 +2,11 @@ package kr.co.vo;
 
 import java.util.Date;
 
+import org.springframework.stereotype.Repository;
+@Repository
 public class MemberVO {
-	private String userid;
-	private String userpass;
+	private String userid = "testid";
+	private String userpass = "testpw";
 	private String email;
 	private String username;
 	private Date regdate;

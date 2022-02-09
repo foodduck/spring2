@@ -1,7 +1,5 @@
 package kr.co.controller;
 
-import static org.junit.Assert.fail;
-
 import java.sql.Connection;
 
 import javax.sql.DataSource;
