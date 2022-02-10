@@ -15,7 +15,7 @@
 	<!-- /webapp/resources/ 디렉토리 안에 있는 파일을 활용가능하게 하겠음 -->
 	<resources mapping="/resources/**" location="/resources/" />
 
-	<!-- 서블릿의 @Controller 애니테이션에서 지정한 경로인 /WEB-INF/views 디렉토리 안에 있는 .jsp로 디스패치하기 위한 규격 설정 -->
+	<!-- 서블릿의 @Controller 애너테이션에서 지정한 경로인 /WEB-INF/views 디렉토리 안에 있는 .jsp로 디스패치하기 위한 규격 설정 -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
