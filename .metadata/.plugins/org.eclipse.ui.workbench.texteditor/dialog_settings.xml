@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="inject"/>
+		<item key="selection" value="jdbc"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="jdbc"/>
+			<item value="commons"/>
+			<item value="security"/>
+			<item value="json"/>
+			<item value="com.company."/>
+			<item value="com.co."/>
 			<item value="inject"/>
 			<item value="person"/>
 			<item value="servlet-api"/>
 			<item value="jackson"/>
-			<item value="json"/>
 			<item value="qr"/>
 			<item value="idChkBtn"/>
 			<item value="bno"/>
 			<item value="&lt;!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-war-plugin --&gt;"/>
 			<item value="war-plugin"/>
-			<item value="plugin"/>
-			<item value="spring-test"/>
-			<item value="spring-tests"/>
-			<item value="userPass"/>
-			<item value="userName"/>
 		</list>
 		<list key="replacehistory">
+			<item value="kr.co."/>
 			<item value="member"/>
 			<item value="BNO"/>
 			<item value="userpass"/>
@@ -39,7 +40,6 @@
 			<item value="getUserpass"/>
 			<item value="getUserid"/>
 			<item value="dao"/>
-			<item value="boardDelete"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
